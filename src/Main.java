@@ -1,28 +1,36 @@
 public class Main {
     public static void main(String[] args) {
         task1();
+        task2();
+        task3();
 
     }
 
     public static void task1() {
-        String street = "манежная";
-        String streetTrue = street.replace("м", "М");
-        System.out.println(streetTrue);
+        System.out.println("Задача 1");
+        String firstName = "Ivan";
+        String middleName = "Ivanovich";
+        String lastName = "Ivanov";
+        String fullName = lastName + " " + firstName + " " + middleName;
+        System.out.println("ФИО сотрудника - " + fullName);
+    }
 
-        String phone = "+79-12 96-661-02";
-        phone = phone.replace("-", "");
-        phone = phone.replace(" ", "");
-        phone = phone.replace("+", "");
+    public static void task2() {
+        System.out.println("\nЗадача 2");
+        String firstName = "Ivan";
+        String middleName = "Ivanovich";
+        String lastName = "Ivanov";
+        String fullName = lastName + " " + firstName + " " + middleName;
+        System.out.println("Данные ФИО сотрудника для заполнения отчета — " + fullName.toUpperCase());
 
-        if (phone.length() == 10) {
-            phone = "7" + phone;
-        } else if (phone.length() > 11) {
-            throw new RuntimeException("Слишком длинный номер телефона");
-        } else if (phone.length() < 10) {
-            throw new RuntimeException("Слишком короткий номер телефона");
-        } else if (phone.length() == 11 && phone.charAt(0) != '7') {
-            throw new RuntimeException("Иностранный номер");
-        }
-        System.out.println("phone = " + phone);
+    }
+
+    public static void task3() {
+        System.out.println("\nЗадача 3");
+        String firstName = "Семён";
+        String middleName = "Семёнович";
+        String lastName = "Иванов";
+        String fullName = lastName + " " + firstName + " " + middleName;
+        System.out.println("ФИО сотрудника - " + fullName.replace("ё", "е"));
     }
 }
